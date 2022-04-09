@@ -1,0 +1,22 @@
+{
+  "name": "alkemy---backend-nodejs",
+  "version": "1.0.0",
+  "description": "testing PostgreSQL & Nodejs REST API, Sequelize",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Guillermo Andrés Pereyra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
