@@ -17,8 +17,7 @@ const jsonParser = bodyParser.json()
 
 // routes.
 app.use('/api/projects', jsonParser, projectRoutes);
-
-app.use('/api/tasks',taskRoutes);
+app.use('/api/tasks', jsonParser, taskRoutes);
 
 //export default app;
 module.exports = app;

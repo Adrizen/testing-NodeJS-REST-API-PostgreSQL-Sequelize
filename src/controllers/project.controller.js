@@ -1,7 +1,6 @@
 const Project = require('../models/Projects');
 
 async function createProject(req, res) {
-    //console.log(req.body);
     const { name, priority, description, deliverydate } = req.body
     try {
         let newProject = await Project.create({
