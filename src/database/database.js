@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize (
+const sequelize = new Sequelize(
     'postgres',  // Database name.
     'postgres',  // Username.
     'admin',     // Password.
@@ -16,5 +16,12 @@ const sequelize = new Sequelize (
         logging: false  // Avoid seeing operations in terminal.
     }
 );
+
+// Sync tables with Postgres DB.
+sequelize.sync().then(() => {
+    console.log('Table Synced');
+}, (err) => {
+    console.log(err);
+});
 
 module.exports = sequelize;

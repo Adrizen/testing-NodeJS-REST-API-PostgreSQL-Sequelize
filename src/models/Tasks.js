@@ -15,7 +15,7 @@ const Task = sequelize.define('task', {
     projectid: {
         type: Sequelize.INTEGER
     }
-},{
+}, {
     timestamps: false
 });
 

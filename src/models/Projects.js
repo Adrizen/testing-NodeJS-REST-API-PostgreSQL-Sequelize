@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../database/database');  // Ojaldre con {}. 
+const sequelize = require('../database/database');
 
-const Task = require('./Tasks')
+const Task = require('./Tasks');
 
 const Project = sequelize.define('projects', {
     id: {
@@ -20,7 +20,7 @@ const Project = sequelize.define('projects', {
     deliverydate: {
         type: Sequelize.DATE
     }
-},{
+}, {
     timestamps: false
 });
 
