@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../database/database');
+const Post = require('../models/Post');
 
-const user = sequelize.define('users', {
+const User = sequelize.define('users', {
     name: {
         type: Sequelize.TEXT,
         validate: {
@@ -36,5 +37,8 @@ const user = sequelize.define('users', {
     tableName: 'users'
 });
 
+User.associate = function(models) {
+    User.hasMany(models.Post, { as: "posts", foreignKey: "userid" });
+};
 
-module.exports = user;
+module.exports = User;

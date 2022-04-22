@@ -49,9 +49,9 @@ function signIn(req, res) {
                 // Passwords are the same, return token.
                 let token = jwt.sign({ user: user }, "secret", {    // token creation
                     expiresIn: "7d"
-                });function signIn(req, res) {
+                }); function signIn(req, res) {
                     let { email, password } = req.body;
-                
+
                     // Searching user.
                     user.findOne({
                         where: {

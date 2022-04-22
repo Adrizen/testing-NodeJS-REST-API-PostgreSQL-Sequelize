@@ -1,4 +1,3 @@
-//import { Router } from 'express';
 const Router = require('express');
 const router = Router();
 
@@ -13,5 +12,4 @@ router.get('/:projectID', projectController.getOneProject);         // Get only 
 router.delete('/:projectID', projectController.deleteOneProject);   // Delete one project given a projectID.
 router.put('/:projectID', projectController.updateProject);         // Update projects given a projectID.
 
-//export default router;
 module.exports = router;
