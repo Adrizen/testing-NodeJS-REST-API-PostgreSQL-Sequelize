@@ -22,7 +22,7 @@ const Post = sequelize.define('Post', {
 });
 
 Post.associate = function(models) {
-    Post.belongsTo(models.User, { as: "author", foreignKey: "userid" })
+    Post.belongsTo(User, { as: "authors", foreignKey: "userid" })
 };
 
 module.exports = Post;

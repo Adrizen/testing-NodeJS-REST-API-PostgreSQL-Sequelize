@@ -2,7 +2,7 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const user = require('../models/User');
-//const { json } = require('sequelize/types');
+
 
 async function signUp(req, res) {
     const { name, password, email } = req.body;

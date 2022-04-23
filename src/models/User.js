@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../database/database');
-const Post = require('../models/Post');
+const Post = require('../models/Post')
+const Role = require('../models/Role')
 
 const User = sequelize.define('users', {
     name: {
@@ -33,12 +34,15 @@ const User = sequelize.define('users', {
             }
         }
     }
-},{
+}, {
     tableName: 'users'
 });
 
-User.associate = function(models) {
-    User.hasMany(models.Post, { as: "posts", foreignKey: "userid" });
+User.associate = function (models) {
+    User.hasMany(Post, { as: "posts", foreignKey: "userid" });
+    User.belongsToMany(Role, {  as: "roles",  through: "user_role"  , foreignKey: "user_id"  });
 };
+
+
 
 module.exports = User;
