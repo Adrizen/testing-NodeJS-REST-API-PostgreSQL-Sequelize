@@ -5,5 +5,5 @@ Using Postman for API testing, you can check the JSON file in the 'postman' fold
 
 This is the Entity–relationship model used in this example:
 
-<img src="postman/Diagram.png" height="30%" width="30%"> <br>_The result are two unrelated groups due to two different tutorials have been followed_
+<img src="postman/Diagram.png" height="60%" width="60%"> <br>_The result are two unrelated groups due to two different tutorials have been followed_
 
