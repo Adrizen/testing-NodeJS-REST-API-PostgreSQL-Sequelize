@@ -43,6 +43,11 @@ User.associate = function (models) {
     User.belongsToMany(Role, {  as: "roles",  through: "user_role"  , foreignKey: "user_id"  });
 };
 
-
+// Check if the user is admin.
+User.isAdmin = function(roles){
+    let tmpArray = [];
+    roles.forEach(role => tmpArray.push(role.role));
+    return tmpArray.includes('admin')
+}
 
 module.exports = User;
